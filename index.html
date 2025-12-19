@@ -3,139 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meheraj Khatri | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Meheraj Khatri | Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <span class="logo">MK</span>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
 
-    <header>
-        <div class="container">
-            <h1>Meheraj Khatri</h1>
-            <p>Computer Science Junior @ Kent State | Systems & Networking</p>
-            <nav>
-                <a href="https://www.linkedin.com/in/meherajkhatri/" target="_blank">LinkedIn</a> &bull;
-                <a href="https://github.com/meheraj-khatri" target="_blank">GitHub</a>
-            </nav>
+    <header class="hero">
+        <h1>Meheraj Khatri</h1>
+        <p class="subtitle">Computer Science Junior @ Kent State | Systems & Networking [cite: 21]</p>
+        <div class="hero-tags">
+            <span>C++</span> <span>Python</span> <span>SQL</span> <span>Systems Programming</span> [cite: 27, 8]
         </div>
     </header>
 
     <main class="container">
-        
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Computer Science Junior at Kent State University specializing in systems architecture and software development. With a strong academic background in <strong>Operating Systems, Database Design, and Computer Networking</strong>, I enjoy solving complex problems at the intersection of hardware and software.
-            </p>
-            <p>
-                Currently, I balance my technical studies with a role in <strong>Federated Desktop Support</strong> and a leadership position as a <strong>Facility Supervisor</strong>. I am CPT/OPT eligible and actively seeking a <strong>Summer 2026 Software Engineering Internship</strong> where I can contribute to building scalable, high-impact solutions.
-            </p>
+        <section class="summary-card">
+            <h2>Summary</h2>
+            <p>I am a Computer Science Junior at Kent State University with a robust foundation in software engineering and system architecture[cite: 24]. I specialize in building secure, scalable, and efficient applications[cite: 25].</p>
+            <p><strong>Status:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Internships[cite: 33].</p>
         </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <div class="job">
-                <h3>Kent State University</h3>
-                <p class="job-meta">Bachelor of Science (BS), Computer Science | Expected Graduation: Dec 2028</p>
-                <p><strong>Honors:</strong> Dean's List, Alpha Lambda Delta Honors Society, Kent State Honors College.</p>
-            </div>
-        </section>
-
-        <section id="expertise">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages & Frameworks</h3>
-                    <ul>
-                        <li>C++, Python, SQL</li>
-                        <li>JavaScript, HTML, CSS</li>
-                        <li>C#, MIPS Assembly, R</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Core Competencies</h3>
-                    <ul>
-                        <li>Operating Systems & Kernels</li>
-                        <li>Database System Design (3NF)</li>
-                        <li>Computer Communication Networks</li>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Human-Interface Computing (UX)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2>Professional Experience</h2>
-             <div class="job">
-                <h3>Federated Desktop Support</h3>
-                <p class="job-meta">Kent State University | August 2025 - Present</p>
-                <ul>
-                    <li>Diagnose and resolve complex hardware, software, and network connectivity issues for 100+ departmental users.</li>
-                    <li>Manage mission-critical systems including POS terminals and Fusion membership software, ensuring maximum operational uptime.</li>
-                    <li>Ensure all departmental IT assets comply with university security standards and lifecycle protocols.</li>
-                </ul>
-                <p class="project-skills"><strong>Key Skills:</strong> Troubleshooting, Networking & Security, Operating Systems, IT Asset Management.</p>
-            </div>
-
-            <div class="job">
-                <h3>Operations Facility Supervisor</h3>
-                <p class="job-meta">Kent State RecWell | April 2025 - Present</p>
-                <ul>
-                    <li>Direct daily operations and risk management for a large-scale recreation facility as the primary shift leader.</li>
-                    <li>Manage high-stakes emergency responses and conflict resolution, maintaining clear documentation via MOR reports.</li>
-                    <li>Lead and delegate tasks to a multi-functional team, ensuring policy compliance and exceptional service delivery.</li>
-                </ul>
-                 <p class="project-skills"><strong>Key Skills:</strong> Team Leadership, Conflict Resolution, Decision Making, Emergency Management.</p>
-            </div>
-        </section>
-        
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-card">
-                <h3>AI-Assisted Research (SURE Program)</h3>
-                <p class="project-meta">Kent State University | Summer 2025</p>
-                <p>Co-authored a review paper on the role of AI in Education under the mentorship of Dr. Younghun Chae.</p>
-                <ul>
-                    <li>Engineered a <strong>Python script</strong> to automate literature data consolidation, increasing research efficiency.</li>
-                    <li>Analyzed the ethical implications and long-term impacts of AI in modern learning environments.</li>
-                </ul>
-                <p class="project-skills"><strong>Skills:</strong> Python, AI Ethics, Data Analysis, Research Automation.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Banker's Algorithm & OS Simulation</h3>
-                <p class="project-meta">Systems Programming Project | 2025</p>
-                <p>Developed a C++ implementation of the Banker’s Algorithm to simulate deadlock avoidance within an operating system.</p>
-                <ul>
-                    <li>Calculated Need matrices and safe sequences to ensure system stability across multiple processes.</li>
-                    <li>Demonstrated deep understanding of resource allocation and process synchronization.</li>
-                </ul>
-                <p class="project-skills"><strong>Skills:</strong> C++, Operating Systems, Algorithmic Thinking.</p>
-            </div>
-        </section>
-
-        <section id="organizations">
-            <h2>Organizations</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <p><strong>Nepalese Student Association</strong> | Executive Member</p>
-                    <p><strong>HacKSU</strong> | Member</p>
-                </div>
-                <div class="skill-category">
-                    <p><strong>Alpha Lambda Delta</strong> | Honors Member</p>
-                    <p><strong>Kent State Honors College</strong> | Student Member</p>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Meheraj Khatri. Designed with a focus on Software Engineering.</p>
-        </div>
-    </footer>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

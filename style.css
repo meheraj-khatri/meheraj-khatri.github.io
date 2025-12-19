@@ -1,13 +1,27 @@
-/* General Reset & Variables */
+/* --- Variables & Theme Management --- */
 :root {
+    /* Dark Theme (Default) */
     --bg-color: #0f172a;
-    --text-color: #f1f5f9;
-    --accent-color: #38bdf8; /* Modern Sky Blue */
     --secondary-bg: #1e293b;
+    --accent-color: #38bdf8; 
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
     --border-color: #334155;
-    --muted-text: #94a3b8;
+    --card-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
 
+body.light-theme {
+    /* Light Theme Overrides */
+    --bg-color: #f8fafc;
+    --secondary-bg: #ffffff;
+    --accent-color: #0284c7; 
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-color: #e2e8f0;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- General Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -15,155 +29,156 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', 'Lato', sans-serif;
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--text-main);
     line-height: 1.6;
-    padding-bottom: 50px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
-/* Header & Navigation */
-header {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    padding: 60px 0;
-    text-align: center;
+/* --- Navigation --- */
+#navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgba(var(--bg-color), 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 40px;
 }
 
-header h1 {
-    font-size: 2.8rem;
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
     color: var(--accent-color);
-    margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: var(--muted-text);
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
-nav {
-    margin-top: 20px;
-}
-
-nav a {
-    color: var(--text-color);
+.nav-links a {
     text-decoration: none;
-    font-weight: 700;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover, .nav-links a.active {
     color: var(--accent-color);
 }
 
-/* Sections */
+/* --- Cards & Content --- */
 section {
-    margin-bottom: 50px;
+    padding: 80px 0;
 }
 
 h2 {
-    font-size: 1.8rem;
-    border-left: 4px solid var(--accent-color);
-    padding-left: 15px;
-    margin-bottom: 25px;
-    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Experience & Projects Cards */
-.job, .project-card {
-    background-color: var(--secondary-bg);
-    padding: 25px;
+h2::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.job-card, .project-card, .edu-card {
+    background: var(--secondary-bg);
+    padding: 30px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    margin-bottom: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 25px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
 }
 
-.job:hover, .project-card:hover {
+.job-card:hover, .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.job h3, .project-card h3 {
-    color: var(--text-color);
-    margin-bottom: 5px;
+    border-color: var(--accent-color);
 }
 
 .job-meta, .project-meta {
-    font-weight: 700;
     color: var(--accent-color);
+    font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
+/* --- Tags & Skills --- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-ul li {
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 20px;
-    color: var(--muted-text);
-}
-
-ul li::before {
-    content: "▹";
-    position: absolute;
-    left: 0;
+.tags span {
+    background: rgba(56, 189, 248, 0.1);
     color: var(--accent-color);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    border: 1px solid var(--accent-color);
 }
 
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* --- Theme Toggle & Buttons --- */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 1001;
 }
 
-.skill-category {
-    background: var(--secondary-bg);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
-
-.skill-category h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.project-skills {
-    margin-top: 15px;
-    font-size: 0.85rem;
-    background: #0f172a;
-    padding: 8px 12px;
-    border-radius: 6px;
+.resume-btn {
     display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 2px solid var(--accent-color);
     color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px 0;
-    color: var(--muted-text);
-    font-size: 0.9rem;
-    border-top: 1px solid var(--border-color);
+.resume-btn:hover {
+    background: rgba(56, 189, 248, 0.1);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    .skills-grid { grid-template-columns: 1fr; }
-}
+.hamburger { display: none; cursor: pointer; font-size: 2rem; }
