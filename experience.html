@@ -9,8 +9,8 @@
 </head>
 <body>
     <nav id="navbar">
-        <div class="nav-container">
-            <span class="logo">MK</span>
+        <div class="nav-container container">
+            <a href="index.html" class="logo">MK</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="experience.html" class="active">Experience</a></li>
@@ -24,25 +24,26 @@
     <main class="container">
         <section>
             <h2>Professional Experience</h2>
-            
-            <div class="job-card">
-                <h3>Federated Desktop Support</h3>
-                <p class="job-meta">Kent State University | August 2025 – Present</p>
-                <ul>
-                    <li>Act as primary IT point of contact for administrative staff and students, managing hardware and network connectivity.</li>
-                    <li>Maintain high-availability for mission-critical systems like POS terminals and Fusion software.</li>
-                    <li>Configure systems according to University IT standards and manage equipment lifecycles.</li>
-                </ul>
-            </div>
+            <div class="grid-container">
+                <div class="job-card">
+                    <h3>Federated Desktop Support</h3>
+                    <p class="job-meta">Kent State University | Aug 2025 – Present</p>
+                    <ul>
+                        <li>IT point of contact for staff/students, managing hardware and network connectivity.</li>
+                        <li>Maintained high-availability for mission-critical POS and Fusion systems.</li>
+                        <li>Managed equipment lifecycles and University IT standards.</li>
+                    </ul>
+                </div>
 
-            <div class="job-card">
-                <h3>Facility Supervisor</h3>
-                <p class="job-meta">Kent State Recreation & Wellness | April 2025 – Present</p>
-                <ul>
-                    <li>Serve as primary shift leader for emergency response, conflict resolution, and risk management.</li>
-                    <li>Direct and delegate tasks to shift teams to ensure operational excellence.</li>
-                    <li>Liaise with Police/EMS and maintain detailed reporting via Microsoft Teams.</li>
-                </ul>
+                <div class="job-card">
+                    <h3>Facility Supervisor</h3>
+                    <p class="job-meta">Kent State Recreation | April 2025 – Present</p>
+                    <ul>
+                        <li>Shift leader for emergency response and risk management.</li>
+                        <li>Directed teams to ensure operational excellence and conflict resolution.</li>
+                        <li>Maintained detailed reporting via Microsoft Teams.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -52,14 +53,14 @@
                 <h3>SURE Research Participant</h3>
                 <p class="job-meta">Kent State University | June 2025 – July 2025</p>
                 <ul>
-                    <li>Engineered a Python script to automate literature review analysis for a paper on AI in Education.</li>
-                    <li>Analyzed the long-term ethical impacts of AI under the mentorship of Dr. Younghun Chae.</li>
+                    <li>Engineered Python scripts to automate literature review analysis for AI in Education.</li>
+                    <li>Analyzed ethical impacts of AI under Dr. Younghun Chae.</li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <button class="theme-toggle">☀️</button>
+    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
     <script src="main.js"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meheraj Khatri | Software Engineer</title>
+    <title>Meheraj Khatri | Aspiring Future Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <nav id="navbar">
-        <div class="nav-container">
-            <span class="logo">MK</span>
+        <div class="nav-container container">
+            <a href="index.html" class="logo">MK</a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -21,25 +21,26 @@
         </div>
     </nav>
 
-    <header class="container" style="padding-top: 100px; text-align: center;">
-        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">Meheraj Khatri</h1>
-        <p class="job-meta" style="font-size: 1.2rem;">Computer Science Junior @ Kent State | Systems & Networking</p>
-        <div class="tags" style="justify-content: center; margin-top: 20px;">
+    <header class="hero container">
+        <h1>Meheraj Khatri</h1>
+        <p class="job-meta" style="font-size: 1.4rem;">Computer Science Junior @ Kent State University</p>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 20px auto;">
+            Building secure, scalable, and efficient applications with a focus on Systems & Networking.
+        </p>
+        <div class="tags" style="justify-content: center;">
             <span>C++</span> <span>Python</span> <span>SQL</span> <span>Systems Programming</span>
         </div>
     </header>
 
     <main class="container">
-        <section class="summary-card">
-            <h2>Summary</h2>
+        <section class="job-card">
+            <h2>About Me</h2>
             <p>I am a Computer Science Junior at Kent State University with a robust foundation in software engineering and system architecture. I specialize in building secure, scalable, and efficient applications.</p>
-            <p style="margin-top: 20px;"><strong>Status:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Internships.</p>
-            <a href="#" class="resume-btn">Download Resume</a>
+            <p style="margin-top: 15px;"><strong>Status:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Internships.</p>
         </section>
     </main>
 
-    <button class="theme-toggle" id="theme-btn">☀️</button>
-
+    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
     <script src="main.js"></script>
 </body>
 </html>
