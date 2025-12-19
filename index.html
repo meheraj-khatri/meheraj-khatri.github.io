@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meheraj Khatri | Software Engineer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <nav id="navbar">
@@ -14,28 +14,32 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>Meheraj Khatri</h1>
-        <p class="subtitle">Computer Science Junior @ Kent State | Systems & Networking [cite: 21]</p>
-        <div class="hero-tags">
-            <span>C++</span> <span>Python</span> <span>SQL</span> <span>Systems Programming</span> [cite: 27, 8]
+    <header class="container" style="padding-top: 100px; text-align: center;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">Meheraj Khatri</h1>
+        <p class="job-meta" style="font-size: 1.2rem;">Computer Science Junior @ Kent State | Systems & Networking</p>
+        <div class="tags" style="justify-content: center; margin-top: 20px;">
+            <span>C++</span> <span>Python</span> <span>SQL</span> <span>Systems Programming</span>
         </div>
     </header>
 
     <main class="container">
         <section class="summary-card">
             <h2>Summary</h2>
-            <p>I am a Computer Science Junior at Kent State University with a robust foundation in software engineering and system architecture[cite: 24]. I specialize in building secure, scalable, and efficient applications[cite: 25].</p>
-            <p><strong>Status:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Internships[cite: 33].</p>
+            <p>I am a Computer Science Junior at Kent State University with a robust foundation in software engineering and system architecture. I specialize in building secure, scalable, and efficient applications.</p>
+            <p style="margin-top: 20px;"><strong>Status:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Internships.</p>
+            <a href="#" class="resume-btn">Download Resume</a>
         </section>
     </main>
 
-    <script src="js/main.js"></script>
+    <button class="theme-toggle" id="theme-btn">☀️</button>
+
+    <script src="main.js"></script>
 </body>
 </html>
