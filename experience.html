@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     <nav id="navbar">
@@ -17,59 +17,50 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
         </div>
     </nav>
 
     <main class="container">
         <section>
-            <h2>Professional Experience</h2>
+            <h2 class="section-heading"><span>02.</span> Professional Experience</h2>
             <div class="grid-container">
                 <div class="job-card">
                     <h3>Federated Desktop Support</h3>
                     <p class="job-meta">Kent State University | Aug 2025 – Present</p>
                     <ul>
-                        <li>IT point of contact for staff/students, managing hardware and network connectivity.</li>
-                        <li>Maintain high-availability for mission-critical POS and Fusion systems.</li>
-                        <li>Troubleshoot complex network and hardware environments within University IT standards.</li>
+                        <li>Orchestrate technical support for campus-wide hardware and network infrastructure.</li>
+                        <li>Manage high-availability systems including mission-critical POS and Fusion environments.</li>
+                        <li>Diagnose and resolve complex connectivity issues within enterprise-level IT frameworks.</li>
                     </ul>
                 </div>
 
                 <div class="job-card">
-                    <h3>Facility Supervisor & Safety Planning</h3>
+                    <h3>Facility Supervisor</h3>
                     <p class="job-meta">KSU Recreation & Wellness | April 2025 – Present</p>
                     <ul>
-                        <li>Shift leader for emergency response and risk management protocols.</li>
-                        <li>Member of the Safety Planning Team, ensuring operational excellence.</li>
-                        <li>Direct teams and resolve conflicts in high-pressure situations.</li>
-                    </ul>
-                </div>
-
-                <div class="job-card">
-                    <h3>Guest Services & Facility Specialist</h3>
-                    <p class="job-meta">KSU Recreation & Wellness | July 2024 – Present</p>
-                    <ul>
-                        <li>Manage facility access and recreation guest services.</li>
-                        <li>Provide frontline support for facility operations and user inquiries.</li>
+                        <li>Lead shift operations and emergency response protocols for a high-traffic facility.</li>
+                        <li>Collaborate with the Safety Planning Team to audit and improve operational risk management.</li>
+                        <li>Direct cross-functional teams and facilitate conflict resolution in high-stakes environments.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Research</h2>
+            <h2 class="section-heading"><span>02.5.</span> Research</h2>
             <div class="job-card">
-                <h3>SURE Research Participant</h3>
+                <h3>SURE Research Fellow</h3>
                 <p class="job-meta">Kent State University | June 2025 – July 2025</p>
                 <ul>
-                    <li>Engineered Python scripts to automate literature review analysis for AI in Education.</li>
-                    <li>Analyzed ethical impacts and academic workflows under Dr. Younghun Chae.</li>
+                    <li>Partnered with Dr. Younghun Chae to automate systematic literature reviews using Python.</li>
+                    <li>Evaluated the ethical implications of AI deployment in academic workflows.</li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">☀️</button>
     <script src="main.js"></script>
 </body>
 </html>

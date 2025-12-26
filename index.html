@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meheraj Khatri | Aspiring Future Software Engineer</title>
+    <title>Meheraj Khatri | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main menu">
         <div class="nav-container container">
-            <a href="index.html" class="logo">MK</a>
-            <ul class="nav-links">
+            <a href="index.html" class="logo" aria-label="Home">MK</a>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <button class="hamburger" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">☰</button>
         </div>
     </nav>
 
     <header class="hero container">
-        <h1>Meheraj Khatri</h1>
-        <p class="job-meta" style="font-size: 1.4rem;">Computer Science Junior @ Kent State University</p>
-        <p style="color: var(--text-muted); max-width: 700px; margin: 20px auto;">
-            Building secure, scalable, and efficient applications with a focus on Systems, Networking, and Human-Centric Design.
+        <p class="job-meta">Hi, my name is</p>
+        <h1>Meheraj Khatri.</h1>
+        <p style="margin-top: 10px;">Computer Science Junior @ Kent State University</p>
+        <p style="color: var(--text-secondary); margin-top: 20px; line-height: 1.8;">
+            I specialize in building secure, high-performance systems. Currently focused on 
+            <strong>Systems Programming</strong> and <strong>Networking</strong> for Summer 2026 internships.
         </p>
-        <div class="tags" style="justify-content: center;">
-            <span>C++</span> <span>Python</span> <span>SQL</span> <span>Systems Programming</span> <span>Networking</span>
+        <div class="tags" style="margin-top: 30px;">
+            <span>C++</span> <span>Python</span> <span>SQL</span> <span>Distributed Systems</span>
         </div>
     </header>
 
     <main class="container">
-        <section class="job-card">
-            <h2>About Me</h2>
-            <p>I am a Computer Science Junior at Kent State University with a robust foundation in software engineering, system architecture, and human-centric design. Equipped with core engineering coursework in Operating Systems, Database Design, and Computer Networking, I specialize in building secure and efficient applications.</p>
-            <p style="margin-top: 15px;">Beyond the IDE, I serve as an IT specialist and Facility Supervisor, specializing in troubleshooting complex environments and leading teams in high-pressure situations.</p>
-            <p style="margin-top: 15px;"><strong>Status:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Software Engineering Internships.</p>
-            <p style="margin-top: 10px;"><strong>Contact:</strong> <a href="mailto:mkhatri5@kent.edu" style="color: var(--accent-color);">mkhatri5@kent.edu</a></p>
+        <section class="job-card" id="about">
+            <h2 style="margin-bottom: 20px;">01. About Me</h2>
+            <p>I am a Junior at Kent State University with a focus on system architecture and human-centric design. I bridge the gap between low-level efficiency (OS, Networking) and high-level usability.</p>
+            <p style="margin-top: 15px;"><strong>Availability:</strong> Eligible for CPT/OPT. Seeking Summer 2026 Internships.</p>
         </section>
     </main>
 
-    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☀️</button>
     <script src="main.js"></script>
 </body>
 </html>

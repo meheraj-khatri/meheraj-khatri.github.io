@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     <nav id="navbar">
@@ -17,60 +17,41 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html" class="active">Education</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
         </div>
     </nav>
 
     <main class="container">
         <section>
-            <h2>Education</h2>
+            <h2 class="section-heading"><span>04.</span> Education</h2>
             <div class="edu-card">
-                <h3>Kent State University</h3>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                    <h3>Kent State University</h3>
+                    <span class="job-meta">Jan 2024 – Dec 2028 (Expected)</span>
+                </div>
                 <p>Bachelor of Science in Computer Science</p>
-                <p class="job-meta">Jan 2024 – Dec 2028 (Expected)</p>
-                <p><strong>Awards:</strong> Dean's List (Fall '25, Spring '25, Spring '24), Alpha Lambda Delta Member.</p>
-            </div>
-            <div class="edu-card">
-                <h3>Nepal Police School</h3>
-                <p>SLC (Secondary School Leaving Certificate)</p>
-                <p class="job-meta">2020 – 2022</p>
+                <p style="margin-top: 10px; color: var(--text-secondary);">
+                    <strong>Honors:</strong> Dean's List (Multiple Semesters), Alpha Lambda Delta Member.
+                </p>
             </div>
         </section>
 
         <section>
-            <h2>Organizations & Leadership</h2>
+            <h2 class="section-heading"><span>05.</span> Expertise</h2>
             <div class="grid-container">
                 <div class="job-card">
-                    <p>🇳🇵 <strong>Nepalese Student Association (Kent-NSA)</strong></p>
-                    <p class="job-meta">Executive Member | Aug 2025 – Present</p>
+                    <h3 style="color: var(--accent); margin-bottom: 10px;">Software Engineering</h3>
+                    <p>C++, Python, SQL, C#, JavaScript, Data Structures, OOP, MIPS Architecture</p>
                 </div>
                 <div class="job-card">
-                    <p>💻 <strong>HacKSU</strong></p>
-                    <p class="job-meta">Student Member | Jan 2024 – Present</p>
-                </div>
-                <div class="job-card">
-                    <p>🏛️ <strong>Kent State Honors College</strong></p>
-                    <p class="job-meta">Member Student | Jan 2024 – Present</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Technical Arsenal</h2>
-            <div class="grid-container">
-                <div class="job-card">
-                    <h3 style="color: var(--accent-color); margin-bottom: 10px;">Languages & Software</h3>
-                    <p>C++, Python, SQL, C#, JavaScript, HTML/CSS, MIPS, R, OOP, Data Structures</p>
-                </div>
-                <div class="job-card">
-                    <h3 style="color: var(--accent-color); margin-bottom: 10px;">Systems & Networking</h3>
-                    <p>OS Kernel Concepts, TCP/IP, Relational Databases (3NF), Computer Organization</p>
+                    <h3 style="color: var(--accent); margin-bottom: 10px;">Systems & Infrastructure</h3>
+                    <p>OS Kernel Concepts, TCP/IP Networking, Relational DB Design, Enterprise IT Support</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">☀️</button>
     <script src="main.js"></script>
 </body>
 </html>
