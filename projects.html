@@ -23,38 +23,40 @@
 
     <main class="container">
         <section>
-            <h2 class="section-heading"><span>03.</span> Featured Projects</h2>
+            <h2 class="section-heading"><span>03.</span> Featured Systems Work</h2>
             <div class="grid-container">
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-type">System Architecture</span>
-                        <h3>University Management System</h3>
-                    </div>
-                    <p class="project-description">
-                        Engineered a relational database system optimized for high-concurrency academic environments. Focus on data integrity and secure access control.
-                    </p>
-                    <ul>
-                        <li>Architected a MySQL schema normalized to 3rd Normal Form (3NF) to eliminate data redundancy.</li>
-                        <li>Implemented a robust Role-Based Access Control (RBAC) layer for segmented user permissions.</li>
-                        <li>Optimized complex JOIN queries for real-time grade analytics and enrollment reporting.</li>
-                    </ul>
-                    <div class="tags"><span>MySQL</span> <span>3NF</span> <span>Flask</span> <span>RBAC</span></div>
-                </div>
-
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-type">Low-Level Programming</span>
                         <h3>Kernel Resource Simulator</h3>
                     </div>
-                    <p class="project-description">
-                        A C++ simulation of operating system deadlock avoidance using the Banker’s Algorithm for safe resource allocation.
-                    </p>
-                    <ul>
-                        <li>Calculated system safety states by evaluating dynamic Need matrices ($Need = Max - Allocation$).</li>
-                        <li>Designed a state-checking engine to prevent circular wait and resource exhaustion.</li>
-                        <li>Simulated asynchronous process execution and resource release cycles.</li>
-                    </ul>
+                    <div class="project-brief"><strong>The Challenge:</strong> Preventing system-wide deadlocks in asynchronous resource allocation.</div>
+                    <div class="project-solution">
+                        <p>C++ simulation of OS deadlock avoidance using the Banker’s Algorithm.</p>
+                        <ul>
+                            <li>Calculated system safety states using dynamic Need matrices.</li>
+                            <li>Designed a state-checking engine to prevent circular wait.</li>
+                            <li>Simulated asynchronous process execution and resource release.</li>
+                        </ul>
+                    </div>
                     <div class="tags"><span>C++</span> <span>Operating Systems</span> <span>Kernel Logic</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">System Architecture</span>
+                        <h3>University Management System</h3>
+                    </div>
+                    <div class="project-brief"><strong>The Challenge:</strong> Managing high-concurrency academic data while maintaining integrity.</div>
+                    <div class="project-solution">
+                        <p>Relational database system optimized for academic environments.</p>
+                        <ul>
+                            <li>Architected a MySQL schema normalized to 3rd Normal Form (3NF).</li>
+                            <li>Implemented a robust Role-Based Access Control (RBAC) layer.</li>
+                            <li>Optimized complex JOIN queries for real-time analytics.</li>
+                        </ul>
+                    </div>
+                    <div class="tags"><span>MySQL</span> <span>3NF</span> <span>Flask</span> <span>RBAC</span></div>
                 </div>
 
                 <div class="project-card">
@@ -62,20 +64,20 @@
                         <span class="project-type">Data Engineering</span>
                         <h3>AI Research Pipeline</h3>
                     </div>
-                    <p class="project-description">
-                        Automated data extraction and NLP-driven analysis for large-scale academic literature reviews.
-                    </p>
-                    <ul>
-                        <li>Developed Python scripts to scrape and parse thousands of research papers for co-authorship patterns.</li>
-                        <li>Automated text-mining workflows to identify emerging trends in AI-driven education.</li>
-                        <li>Reduced manual data entry time by approximately 80% through workflow automation.</li>
-                    </ul>
+                    <div class="project-brief"><strong>The Challenge:</strong> Manual extraction of academic literature was inefficient.</div>
+                    <div class="project-solution">
+                        <p>Automated data extraction and NLP-driven analysis for research.</p>
+                        <ul>
+                            <li>Developed Python scripts to scrape thousands of research papers.</li>
+                            <li>Automated text-mining to identify emerging trends in AI.</li>
+                            <li>Reduced manual data entry time by approximately 80%.</li>
+                        </ul>
+                    </div>
                     <div class="tags"><span>Python</span> <span>NLP</span> <span>Automation</span> <span>Research</span></div>
                 </div>
             </div>
         </section>
     </main>
-
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">☀️</button>
     <script src="main.js"></script>
 </body>

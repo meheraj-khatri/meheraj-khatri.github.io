@@ -23,35 +23,36 @@
 
     <main class="container">
         <section>
-            <h2 class="section-heading"><span>04.</span> Education</h2>
-            <div class="edu-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+            <h2 class="section-heading"><span>04.</span> Academic Foundation</h2>
+            <div class="edu-card highlight-card">
+                <div class="edu-header">
                     <h3>Kent State University</h3>
                     <span class="job-meta">Jan 2024 – Dec 2028 (Expected)</span>
                 </div>
-                <p>Bachelor of Science in Computer Science</p>
-                <p style="margin-top: 10px; color: var(--text-secondary);">
-                    <strong>Honors:</strong> Dean's List (Multiple Semesters), Alpha Lambda Delta Member.
-                </p>
+                <p class="degree-title">Bachelor of Science in Computer Science</p>
+                <div class="honors-grid">
+                    <div class="honor-item"><strong>Dean's List</strong> Member</div>
+                    <div class="honor-item"><strong>Alpha Lambda Delta</strong> Member</div>
+                </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-heading"><span>05.</span> Expertise</h2>
+            <h2 class="section-heading"><span>05.</span> Technical Proficiency Matrix</h2>
             <div class="grid-container">
-                <div class="job-card">
-                    <h3 style="color: var(--accent); margin-bottom: 10px;">Software Engineering</h3>
-                    <p>C++, Python, SQL, C#, JavaScript, Data Structures, OOP, MIPS Architecture</p>
+                <div class="skill-category-card">
+                    <h4>⚙️ Systems & Kernel</h4>
+                    <p>Focus on efficiency and resource management.</p>
+                    <div class="tags"><span>C++</span> <span>MIPS</span> <span>OS Logic</span> <span>Memory</span></div>
                 </div>
-                <div class="job-card">
-                    <h3 style="color: var(--accent); margin-bottom: 10px;">Systems & Infrastructure</h3>
-                    <p>OS Kernel Concepts, TCP/IP Networking, Relational DB Design, Enterprise IT Support</p>
+                <div class="skill-category-card">
+                    <h4>☁️ Infrastructure & Data</h4>
+                    <p>Architecting secure, high-concurrency environments.</p>
+                    <div class="tags"><span>Python</span> <span>SQL</span> <span>TCP/IP</span> <span>RBAC</span></div>
                 </div>
             </div>
         </section>
     </main>
-
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">☀️</button>
     <script src="main.js"></script>
 </body>
 </html>
