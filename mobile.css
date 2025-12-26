@@ -1,32 +1,63 @@
+/* --- Mobile Responsive Refinements --- */
 @media screen and (max-width: 768px) {
+    /* Navigation Adjustments */
+    nav {
+        height: auto;
+        padding: 1rem 0;
+    }
+
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 75%;
-        background: var(--bg-card);
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap; /* Allows links to stack if necessary on very small screens */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    /* Typography Scaling */
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Item Layout Adjustments */
+    .item-header {
         flex-direction: column;
-        justify-content: center;
-        transition: 0.3s ease-in-out;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        gap: 0.25rem;
     }
 
-    .nav-links.active {
-        right: 0;
+    .item h3 {
+        font-size: 1.25rem;
     }
 
-    .hamburger {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-        color: var(--accent);
-        z-index: 1001;
+    .item-meta {
+        font-size: 0.8rem;
     }
 
-    .hero h1 { font-size: 2.5rem; }
-    
-    .grid-container {
-        grid-template-columns: 1fr;
+    .item-desc {
+        font-size: 0.9rem;
+    }
+
+    /* Container Padding */
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Fixed Theme Toggle Position for Mobile */
+    .theme-toggle {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
     }
 }

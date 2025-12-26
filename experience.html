@@ -5,73 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="nav-container container">
-            <a href="index.html" class="logo">MK</a>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" style="font-weight: 700; color: var(--fg); text-decoration: none;">MK</a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
                 <li><a href="experience.html" class="active">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
             </ul>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
         </div>
     </nav>
 
     <main class="container">
-        <section class="experience-timeline">
-            <h2 class="section-heading">Professional Journey</h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="job-card">
-                    <div class="job-header">
-                        <h3>Federated Desktop Support</h3>
-                        <span class="job-date">Aug 2025 – Present</span>
-                    </div>
-                    <p class="job-location">Kent State University</p>
-                    <ul>
-                        <li>Orchestrate support for campus-wide hardware and network infrastructure.</li>
-                        <li>Manage high-availability mission-critical POS and Fusion environments.</li>
-                        <li>Resolve complex connectivity issues within enterprise IT frameworks.</li>
-                    </ul>
+        <header class="hero">
+            <h2 class="section-title">Professional Journey</h2>
+            <h1>Experience.</h1>
+        </header>
+
+        <section>
+            <div class="item">
+                <div class="item-header">
+                    <h3>Federated Desktop Support</h3>
+                    <span class="item-meta">Aug 2025 – Present</span>
                 </div>
+                <p class="item-desc">Kent State University — Enterprise IT Infrastructure</p>
+                <ul class="item-list">
+                    <li>Orchestrate support for campus-wide hardware and network infrastructure.</li>
+                    <li>Manage high-availability mission-critical POS and Fusion environments.</li>
+                    <li>Resolve complex connectivity issues within enterprise IT frameworks.</li>
+                </ul>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="job-card highlight-card">
-                    <div class="job-header">
-                        <h3>SURE Research Fellow</h3>
-                        <span class="job-date">June 2025 – July 2025</span>
-                    </div>
-                    <p class="job-location">Kent State University</p>
-                    <ul>
-                        <li>Automated systematic literature reviews using Python with Dr. Younghun Chae.</li>
-                        <li>Evaluated ethical implications of AI deployment in academic workflows.</li>
-                    </ul>
+            <div class="item">
+                <div class="item-header">
+                    <h3>SURE Research Fellow</h3>
+                    <span class="item-meta">June 2025 – July 2025</span>
                 </div>
+                <p class="item-desc">Kent State University — AI Research Pipeline</p>
+                <ul class="item-list">
+                    <li>Automated systematic literature reviews using Python with Dr. Younghun Chae.</li>
+                    <li>Evaluated ethical implications of AI deployment in academic workflows.</li>
+                    <li>Streamlined data extraction workflows for large-scale research papers.</li>
+                </ul>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="job-card">
-                    <div class="job-header">
-                        <h3>Facility Supervisor</h3>
-                        <span class="job-date">April 2025 – Present</span>
-                    </div>
-                    <p class="job-location">KSU Recreation & Wellness</p>
-                    <ul>
-                        <li>Lead shift operations and emergency response protocols.</li>
-                        <li>Audit and improve operational risk management with Safety Planning Team.</li>
-                    </ul>
+            <div class="item">
+                <div class="item-header">
+                    <h3>Facility Supervisor</h3>
+                    <span class="item-meta">April 2025 – Present</span>
                 </div>
+                <p class="item-desc">KSU Recreation & Wellness — Leadership & Risk Management</p>
+                <ul class="item-list">
+                    <li>Lead shift operations and emergency response protocols for university facilities.</li>
+                    <li>Audit and improve operational risk management with Safety Planning Team.</li>
+                </ul>
             </div>
         </section>
     </main>
+
+    <button class="theme-toggle" id="theme-btn">Switch Theme</button>
     <script src="main.js"></script>
 </body>
 </html>
