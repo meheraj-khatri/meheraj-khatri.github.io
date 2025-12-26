@@ -3,55 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meheraj Khatri | Systems Engineer</title>
+    <title>Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-    <nav id="navbar" role="navigation" aria-label="Main menu">
-        <div class="nav-container container">
-            <a href="index.html" class="logo" aria-label="Home">MK</a>
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" style="font-weight: 700; color: var(--fg); text-decoration: none;">MK</a>
+            <ul class="nav-links">
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
             </ul>
-            <button class="hamburger" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">☰</button>
         </div>
     </nav>
 
-    <header class="hero container">
-        <div class="status-badge">
-            <span class="pulse"></span> Available for Summer 2026 Internships
-        </div>
-        <p class="job-meta">Hi, my name is</p>
+    <header class="container hero">
         <h1>Meheraj Khatri.</h1>
-        <h2 class="sub-heading">I build the systems that power the web.</h2>
-        <p class="hero-description">
-            I am a <strong>Computer Science Junior</strong> at Kent State University specializing in 
-            low-level efficiency and high-level reliability. Currently focusing on 
-            <strong>Systems Programming</strong> and <strong>Networking</strong>.
-        </p>
-        <div class="cta-group">
-            <a href="projects.html" class="btn btn-primary">View My Systems Work</a>
-            <a href="experience.html" class="btn btn-secondary">See Experience</a>
-        </div>
-        <div class="featured-tags">
-            <small>Core Stack:</small>
-            <span>C++</span> <span>Python</span> <span>SQL</span> <span>Distributed Systems</span>
-        </div>
+        <p>Computer Science @ Kent State. Focused on system architecture, kernel logic, and the bridge between low-level efficiency and human design.</p>
     </header>
 
     <main class="container">
-        <section class="job-card" id="about">
-            <h2 style="margin-bottom: 20px;">About Me</h2>
-            <p>I focus on system architecture and human-centric design. I bridge the gap between low-level efficiency (OS, Networking) and high-level usability.</p>
-            <p style="margin-top: 15px;"><strong>Status:</strong> Eligible for CPT/OPT. Seeking roles in Systems Engineering.</p>
+        <section id="featured">
+            <h2 class="section-title">Current Focus</h2>
+            <div class="item">
+                <div class="item-header">
+                    <h3>Systems Programming</h3>
+                    <span class="item-meta">Summer 2026</span>
+                </div>
+                <p class="item-desc">Seeking opportunities to build secure, high-performance distributed systems and networking infrastructure.</p>
+            </div>
         </section>
     </main>
 
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☀️</button>
+    <button class="theme-toggle" id="theme-btn">Switch Theme</button>
     <script src="main.js"></script>
 </body>
 </html>
