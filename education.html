@@ -3,52 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Education | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" style="font-weight: 700; color: var(--fg); text-decoration: none;">MK</a>
-            <ul class="nav-links">
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html" class="active">Education</a></li>
-            </ul>
-        </div>
+    <nav class="container nav-content">
+        <a href="index.html" class="logo">MK</a>
+        <ul class="nav-links">
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+        </ul>
     </nav>
 
     <main class="container">
         <header class="hero">
             <h2 class="section-title">Background</h2>
-            <h1>Education & Skills.</h1>
+            <h1>Education.</h1>
         </header>
 
         <section>
             <div class="item">
-                <div class="item-header">
-                    <h3>Kent State University</h3>
-                    <span class="item-meta">Expected 2028</span>
+                <span class="item-meta">Expected Dec 2027</span>
+                <div>
+                    <h3>Kent State University </h3>
+                    <p class="item-sub">B.S. in Computer Science | GPA: 3.68 </p>
+                    <p class="item-desc">Dean’s List: Spring 2024, Spring 2025, Fall 2025[cite: 6].</p>
+                    <ul class="item-list">
+                        <li><strong>Coursework:</strong> Data Structures, Operating Systems, Database Design, Software Engineering, Programming Patterns[cite: 7].</li>
+                        <li><strong>Involvement:</strong> Kent-NSA (Executive), HacKSU, Alpha Lambda Delta Honors Society[cite: 8].</li>
+                    </ul>
                 </div>
-                <p class="item-desc">B.S. in Computer Science</p>
-                <p class="item-desc" style="font-style: italic;">Honors: Dean's List, Alpha Lambda Delta Member.</p>
             </div>
         </section>
 
         <section>
             <h2 class="section-title">Technical Matrix</h2>
             <div class="item">
-                <h3>Software Engineering</h3>
-                <p class="item-desc">C++, Python, SQL, C#, Data Structures, OOP, MIPS Architecture.</p>
+                <span class="item-meta">Languages & DB</span>
+                <p class="item-desc">Python, C++, MySQL, JavaScript, PostgreSQL, RStudio[cite: 10, 13, 50].</p>
             </div>
             <div class="item">
-                <h3>Systems & Infrastructure</h3>
-                <p class="item-desc">OS Kernel Concepts, TCP/IP Networking, Relational DB Design, Enterprise IT Support.</p>
+                <span class="item-meta">Frameworks & Tools</span>
+                <p class="item-desc">Flask, Pandas, Pygame, Git/GitHub, Linux/Windows OS[cite: 11, 12, 45].</p>
             </div>
         </section>
     </main>
 
-    <button class="theme-toggle" id="theme-btn">Switch Theme</button>
+    <button class="theme-toggle" id="theme-btn">Theme</button>
     <script src="main.js"></script>
 </body>
 </html>

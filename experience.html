@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Experience | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" style="font-weight: 700; color: var(--fg); text-decoration: none;">MK</a>
-            <ul class="nav-links">
-                <li><a href="experience.html" class="active">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-            </ul>
-        </div>
+    <nav class="container nav-content">
+        <a href="index.html" class="logo">MK</a>
+        <ul class="nav-links">
+            <li><a href="experience.html" class="active">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+        </ul>
     </nav>
 
     <main class="container">
@@ -26,46 +25,47 @@
 
         <section>
             <div class="item">
-                <div class="item-header">
+                <span class="item-meta">Aug 2025 — Pres.</span>
+                <div>
                     <h3>Federated Desktop Support</h3>
-                    <span class="item-meta">Aug 2025 – Present</span>
+                    <p class="item-sub">KSU Student Recreation and Wellness Center</p>
+                    <ul class="item-list">
+                        <li>Primary technical contact resolving hardware, software, and network infrastructure issues.</li>
+                        <li>Manage specialized support for <span class="tech-pill">POS terminals</span>, <span class="tech-pill">Fusion</span>, and <span class="tech-pill">WINPAK</span>.</li>
+                        <li>Ensure compliance with university IT security standards during system deployment.</li>
+                    </ul>
                 </div>
-                <p class="item-desc">Kent State University — KSU Student Recreation & Wellness Technology Department</p>
-                <ul class="item-list">
-                    <li>Orchestrate support for campus-wide hardware and network infrastructure.</li>
-                    <li>Manage high-availability mission-critical POS and Fusion environments.</li>
-                    <li>Resolve complex connectivity issues within enterprise IT frameworks.</li>
-                </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
-                    <h3>SURE Research Fellow</h3>
-                    <span class="item-meta">June 2025 – July 2025</span>
+                <span class="item-meta">Jun — Jul 2025</span>
+                <div>
+                    <h3>Undergraduate Research Fellow</h3>
+                    <p class="item-sub">SURE Research Experience</p>
+                    <ul class="item-list">
+                        <li>Engineered a Python pipeline using <span class="tech-pill">Pandas</span> to unify datasets from ACM, IEEE, Springer, and WoS.</li>
+                        <li>Performed data cleaning and deduplication to create structured repositories.</li>
+                        <li>Applied Kitchenham and Booth SLR frameworks for methodological integrity.</li>
+                    </ul>
                 </div>
-                <p class="item-desc">Kent State University — AI Research Pipeline</p>
-                <ul class="item-list">
-                    <li>Automated systematic literature reviews using Python with Dr. Younghun Chae.</li>
-                    <li>Evaluated ethical implications of AI deployment in academic workflows.</li>
-                    <li>Streamlined data extraction workflows for large-scale research papers.</li>
-                </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
+                <span class="item-meta">Apr 2025 — Pres.</span>
+                <div>
                     <h3>Facility Supervisor</h3>
-                    <span class="item-meta">April 2025 – Present</span>
+                    <p class="item-sub">Operations & Guest Services</p>
+                    <ul class="item-list">
+                        <li>Primary decision-maker for building operations and emergency incidents.</li>
+                        <li>Supervise student employee cohorts to ensure protocol adherence.</li>
+                        <li>Troubleshoot facility malfunctions, including technology and access control.</li>
+                    </ul>
                 </div>
-                <p class="item-desc">KSU Recreation & Wellness — Leadership & Risk Management</p>
-                <ul class="item-list">
-                    <li>Lead shift operations and emergency response protocols for university facilities.</li>
-                    <li>Audit and improve operational risk management with Safety Planning Team.</li>
-                </ul>
             </div>
         </section>
     </main>
 
-    <button class="theme-toggle" id="theme-btn">Switch Theme</button>
+    <button class="theme-toggle" id="theme-btn">Theme</button>
     <script src="main.js"></script>
 </body>
 </html>
