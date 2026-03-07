@@ -1,56 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navLinks = document.getElementById('nav-links');
-    const themeBtn = document.getElementById('theme-toggle');
 
-    // 1. Mobile Menu with body-lock (prevents scrolling when menu is open)
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            const isOpen = navLinks.classList.contains('active');
-            mobileToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
-            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+            mobileToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
         });
     }
 
-    // 2. Theme Toggle with LocalStorage
-    const updateThemeButton = (isDark) => {
-        themeBtn.innerHTML = isDark ? 
-            '<span>☀️ Light</span>' : 
-            '<span>🌙 Dark</span>';
-    };
-
+    // 2. Theme Toggle with LocalStorage & Icon Support
+    const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
-        // Initialize
-        const isDark = localStorage.getItem('theme') === 'dark';
-        if (isDark) {
+        const updateButtonText = (isDark) => {
+            themeBtn.innerHTML = isDark ? '<span>☀️ Light</span>' : '<span>🌙 Dark</span>';
+        };
+
+        // Check for saved preference
+        const isDarkMode = localStorage.getItem('theme') === 'dark';
+        if (isDarkMode) {
             document.body.classList.add('dark-mode');
         }
-        updateThemeButton(isDark);
+        updateButtonText(isDarkMode);
 
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            const currentDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', currentDark ? 'dark' : 'light');
-            updateThemeButton(currentDark);
+            const isNowDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
+            updateButtonText(isNowDark);
         });
     }
 
-    // 3. Live Terminal Ping Simulation (For Contact Page)
+    // 3. Live Ping Simulation (Contact Page Only)
     const pingContainer = document.getElementById('live-ping');
     if (pingContainer) {
         let seq = 1;
-        const addPing = () => {
-            const time = (Math.random() * 5 + 15).toFixed(1);
-            const line = document.createElement('div');
-            line.className = 'term-line';
-            line.style.fontSize = '0.8rem';
-            line.style.opacity = '0.7';
-            line.innerHTML = `<span style="color:var(--accent)">[OK]</span> response from ksu.edu: seq=${seq++} time=${time}ms`;
+        const createPing = () => {
+            const time = (Math.random() * 0.02 + 0.04).toFixed(3);
+            const p = document.createElement('p');
+            p.style.margin = "4px 0";
+            p.style.fontSize = "0.85rem";
+            p.style.color = "var(--text-muted)";
+            p.innerHTML = `<span style="color:var(--accent)">></span> 64 bytes from KSU_GATEWAY: icmp_seq=${seq++} time=${time} ms`;
             
-            pingContainer.prepend(line);
-            if (pingContainer.children.length > 5) pingContainer.lastChild.remove();
+            pingContainer.prepend(p); // Newest pings at top
+            
+            if (pingContainer.children.length > 5) {
+                pingContainer.lastChild.remove();
+            }
         };
-        setInterval(addPing, 3000);
+
+        createPing(); 
+        setInterval(createPing, 4000);
     }
+
+    console.log("%c MK_SYSTEMS_v3.0: Online ", "background: #2563eb; color: #fff; font-weight: bold; padding: 2px 5px;");
 });
