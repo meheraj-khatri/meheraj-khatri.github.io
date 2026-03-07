@@ -10,7 +10,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Live Ping Simulation for Contact Page
+    // 2. Glitch Effect Trigger
+    const glitchTitle = document.querySelector('.glitch');
+    if (glitchTitle) {
+        const originalText = glitchTitle.textContent;
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        
+        glitchTitle.addEventListener('mouseenter', () => {
+            let iteration = 0;
+            const interval = setInterval(() => {
+                glitchTitle.textContent = originalText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) return originalText[index];
+                        return letters[Math.floor(Math.random() * 26)];
+                    })
+                    .join("");
+                
+                if (iteration >= originalText.length) clearInterval(interval);
+                iteration += 1 / 3;
+            }, 30);
+        });
+    }
+
+    // 3. Live Ping Simulation (Optimized)
     const pingContainer = document.getElementById('live-ping');
     let seq = 1;
     
@@ -19,9 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const time = (Math.random() * 0.02 + 0.04).toFixed(3);
             const p = document.createElement('p');
             p.style.margin = "4px 0";
-            p.style.fontSize = "0.85rem";
-            p.style.color = "#94a3b8";
-            p.textContent = `64 bytes from KSU_GATEWAY: icmp_seq=${seq++} ttl=64 time=${time} ms`;
+            p.innerHTML = `<span style="color: #27c93f;">64 bytes</span> from KSU_GATEWAY: icmp_seq=${seq++} ttl=64 time=${time} ms`;
+            
             pingContainer.appendChild(p);
             
             if (pingContainer.children.length > 4) {
@@ -33,21 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(createPing, 4000);
     }
 
-    // 3. Theme Toggle Logic
+    // 4. Theme Toggle Logic
     const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
+        // Apply saved theme
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-mode');
-            themeBtn.innerText = 'Light Mode';
+            themeBtn.innerText = 'Light';
         }
 
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            themeBtn.innerText = isDark ? 'Light Mode' : 'Dark Mode';
+            themeBtn.innerText = isDark ? 'Light' : 'Theme';
         });
     }
 
-    console.log("%c MK_SYSTEMS_v3.0: Online ", "background: #2563eb; color: #fff; font-weight: bold; border-radius: 4px; padding: 2px 5px;");
+    console.log("%c MK_SYSTEMS_v3.0: Online ", "background: #2563eb; color: #fff; font-weight: bold; padding: 2px 5px;");
 });
