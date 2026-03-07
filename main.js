@@ -1,53 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navLinks = document.getElementById('nav-links');
+    const themeBtn = document.getElementById('theme-toggle');
 
+    // 1. Mobile Menu with body-lock (prevents scrolling when menu is open)
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            const isOpen = navLinks.classList.contains('active');
+            mobileToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
         });
     }
 
-    // 2. Live Ping Simulation for Contact Page
-    const pingContainer = document.getElementById('live-ping');
-    let seq = 1;
-    
-    if (pingContainer) {
-        const createPing = () => {
-            const time = (Math.random() * 0.02 + 0.04).toFixed(3);
-            const p = document.createElement('p');
-            p.style.margin = "4px 0";
-            p.style.fontSize = "0.85rem";
-            p.style.color = "#94a3b8";
-            p.textContent = `64 bytes from KSU_GATEWAY: icmp_seq=${seq++} ttl=64 time=${time} ms`;
-            pingContainer.appendChild(p);
-            
-            if (pingContainer.children.length > 4) {
-                pingContainer.removeChild(pingContainer.firstChild);
-            }
-        };
+    // 2. Theme Toggle with LocalStorage
+    const updateThemeButton = (isDark) => {
+        themeBtn.innerHTML = isDark ? 
+            '<span>☀️ Light</span>' : 
+            '<span>🌙 Dark</span>';
+    };
 
-        createPing(); 
-        setInterval(createPing, 4000);
-    }
-
-    // 3. Theme Toggle Logic
-    const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
-        if (localStorage.getItem('theme') === 'dark') {
+        // Initialize
+        const isDark = localStorage.getItem('theme') === 'dark';
+        if (isDark) {
             document.body.classList.add('dark-mode');
-            themeBtn.innerText = 'Light Mode';
         }
+        updateThemeButton(isDark);
 
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            themeBtn.innerText = isDark ? 'Light Mode' : 'Dark Mode';
+            const currentDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', currentDark ? 'dark' : 'light');
+            updateThemeButton(currentDark);
         });
     }
 
-    console.log("%c MK_SYSTEMS_v3.0: Online ", "background: #2563eb; color: #fff; font-weight: bold; border-radius: 4px; padding: 2px 5px;");
+    // 3. Live Terminal Ping Simulation (For Contact Page)
+    const pingContainer = document.getElementById('live-ping');
+    if (pingContainer) {
+        let seq = 1;
+        const addPing = () => {
+            const time = (Math.random() * 5 + 15).toFixed(1);
+            const line = document.createElement('div');
+            line.className = 'term-line';
+            line.style.fontSize = '0.8rem';
+            line.style.opacity = '0.7';
+            line.innerHTML = `<span style="color:var(--accent)">[OK]</span> response from ksu.edu: seq=${seq++} time=${time}ms`;
+            
+            pingContainer.prepend(line);
+            if (pingContainer.children.length > 5) pingContainer.lastChild.remove();
+        };
+        setInterval(addPing, 3000);
+    }
 });
