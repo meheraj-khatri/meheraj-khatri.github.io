@@ -8,51 +8,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="container">
-        <div class="nav-content">
-            <a href="index.html" class="logo">MK</a>
-            <ul class="nav-links">
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html" class="active">Education</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <nav class="card nav-bar">
+            <div class="logo">MK_SYSTEMS_v3.0</div>
+            <div class="nav-links-wrapper">
+                <a href="index.html">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="education.html" class="active">Education</a>
+            </div>
+        </nav>
 
-    <main class="container">
-        <header class="hero">
-            <h2 class="section-title">Background</h2>
-            <h1>Education.</h1>
+        <header class="card">
+            <h2 class="section-title">ACADEMIC PROFILE</h2>
+            <h1>Background & Skills.</h1>
         </header>
 
-        <section>
-            <div class="item">
+        <div class="card">
+            <div class="item-header">
+                <h3>Kent State University</h3>
                 <span class="item-meta">Expected Dec 2027</span>
+            </div>
+            <p class="item-sub">Major: B.S. in Computer Science | GPA: 3.68 / 4.00</p>
+            <ul class="item-list">
+                <li>Dean’s List recipient: Spring 2024, Spring 2025, Fall 2025.</li>
+                <li>Executive Member of Kent-NSA and active member of HacKSU and Alpha Lambda Delta Honors Society.</li>
+                <li>Coursework: Data Structures and Algorithms, Computer Organization, Operating Systems, Database System Design, Software Engineering, Programming Patterns.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">TECHNICAL MATRIX</h2>
+            <div class="matrix-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
                 <div>
-                    <h3>Kent State University</h3>
-                    <p class="item-sub">B.S. in Computer Science | GPA: 3.68</p>
-                    <p class="item-desc">Dean’s List: Spring 2024, Spring 2025, Fall 2025. Member of Alpha Lambda Delta Honors Society and HacKSU.</p>
-                    <ul class="item-list">
-                        <li><strong>Coursework:</strong> Data Structures, Operating Systems, Database Design, Software Engineering, Computer Organization.</li>
+                    <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">Languages & Data</h4>
+                    <ul class="item-list" style="margin-top: 0;">
+                        <li>Python, C++, MySQL, JavaScript, SQL.</li>
+                        <li>Frameworks: Flask, Pandas.</li>
+                        <li>Databases: PostgreSQL, Relational Schema Design.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">Tools & Systems</h4>
+                    <ul class="item-list" style="margin-top: 0;">
+                        <li>Dev Tools: Git/GitHub, Linux/Windows OS, Terminal.</li>
+                        <li>Other: HTML/CSS, RStudio.</li>
+                        <li>Systems: OS Kernel Logic, Infrastructure Support.</li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">Technical Matrix</h2>
-            <div class="item">
-                <span class="item-meta">Languages & DB</span>
-                <p class="item-desc">Python, C++, MySQL, JavaScript, PostgreSQL, MIPS Assembly, RStudio.</p>
-            </div>
-            <div class="item">
-                <span class="item-meta">Frameworks & Tools</span>
-                <p class="item-desc">Flask, Pandas, Pygame, Git/GitHub, Linux/Windows OS, Terminal.</p>
-            </div>
-        </section>
-    </main>
-
-    <button class="theme-toggle" id="theme-btn">Theme</button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
