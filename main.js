@@ -1,34 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Current year for footer
-    console.log("Systems Portfolio Initialized.");
+    // 1. Live Ping Simulation for Contact Page
+    const pingContainer = document.getElementById('live-ping');
+    let seq = 1;
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-});
+    if (pingContainer) {
+        const createPing = () => {
+            const time = (Math.random() * 0.02 + 0.04).toFixed(3);
+            const p = document.createElement('p');
+            p.style.margin = "2px 0";
+            p.textContent = `64 bytes from KSU_GATEWAY: icmp_seq=${seq++} ttl=64 time=${time} ms`;
+            pingContainer.appendChild(p);
+            
+            // Keep the last 4 pings to avoid vertical overflow
+            if (pingContainer.children.length > 4) {
+                pingContainer.removeChild(pingContainer.firstChild);
+            }
+        };
 
-document.addEventListener('DOMContentLoaded', () => {
-    const themeBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    // Check for saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        themeBtn.innerText = 'Light Mode';
+        createPing(); 
+        setInterval(createPing, 4000);
     }
 
-    themeBtn.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeBtn.innerText = isDark ? 'Light Mode' : 'Dark Mode';
-    });
+    // 2. Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeBtn.innerText = 'Light Mode';
+        }
 
-    console.log("Systems Portfolio Initialized.");
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeBtn.innerText = isDark ? 'Light Mode' : 'Dark Mode';
+        });
+    }
+
+    // 3. System Branding Console Log
+    console.log("%c MK_SYSTEMS_v3.0: Online ", "background: #2563eb; color: #fff; font-weight: bold; border-radius: 4px; padding: 2px 5px;");
 });
