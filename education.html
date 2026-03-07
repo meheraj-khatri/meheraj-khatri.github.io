@@ -3,62 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
     <title>Education | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="card nav-bar">
-            <div class="logo">MK_SYSTEMS_v3.0</div>
-            <div class="nav-links-wrapper">
-                <a href="index.html">Home</a>
-                <a href="experience.html">Experience</a>
-                <a href="projects.html">Projects</a>
-                <a href="education.html" class="active">Education</a>
-            </div>
-        </nav>
-
-        <header class="card">
-            <h2 class="section-title">ACADEMIC PROFILE</h2>
-            <h1>Background & Skills.</h1>
-        </header>
-
-        <div class="card">
-            <div class="item-header">
-                <h3>Kent State University</h3>
-                <span class="item-meta">Expected Dec 2027</span>
-            </div>
-            <p class="item-sub">Major: B.S. in Computer Science | GPA: 3.68 / 4.00</p>
-            <ul class="item-list">
-                <li>Dean’s List recipient: Spring 2024, Spring 2025, Fall 2025.</li>
-                <li>Executive Member of Kent-NSA and active member of HacKSU and Alpha Lambda Delta Honors Society.</li>
-                <li>Coursework: Data Structures and Algorithms, Computer Organization, Operating Systems, Database System Design, Software Engineering, Programming Patterns.</li>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Meheraj Khatri</a>
+            <ul class="nav-links">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="card">
-            <h2 class="section-title">TECHNICAL MATRIX</h2>
-            <div class="matrix-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                <div>
-                    <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">Languages & Data</h4>
-                    <ul class="item-list" style="margin-top: 0;">
-                        <li>Python, C++, MySQL, JavaScript, SQL.</li>
-                        <li>Frameworks: Flask, Pandas.</li>
-                        <li>Databases: PostgreSQL, Relational Schema Design.</li>
-                    </ul>
+    <main class="container">
+        <h2 class="page-title">Education & Skills</h2>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <h3>Kent State University</h3>
+                <span class="date">Expected December 2027 [cite: 4]</span>
+            </div>
+            <p><strong>B.S. in Computer Science</strong> (GPA: 3.68 / 4.00) [cite: 5]</p>
+            <p>Dean’s List: Spring 2024, Spring 2025, Fall 2025 [cite: 6]</p>
+            <p>Activities: Kent-NSA (Executive Member), HacKSU, Alpha Lambda Delta Honors Society [cite: 8]</p>
+        </div>
+
+        <section class="skills-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages & Databases</h4>
+                    <p>Python, C++, MySQL, JavaScript, PostgreSQL [cite: 10, 50]</p>
                 </div>
-                <div>
-                    <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">Tools & Systems</h4>
-                    <ul class="item-list" style="margin-top: 0;">
-                        <li>Dev Tools: Git/GitHub, Linux/Windows OS, Terminal.</li>
-                        <li>Other: HTML/CSS, RStudio.</li>
-                        <li>Systems: OS Kernel Logic, Infrastructure Support.</li>
-                    </ul>
+                <div class="skill-category">
+                    <h4>Frameworks & Tools</h4>
+                    <p>Flask, Pandas, Git/GitHub, Linux, Terminal, RStudio [cite: 11, 12, 13]</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <script src="main.js"></script>
+        </section>
+    </main>
 </body>
 </html>

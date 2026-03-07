@@ -3,92 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <title>Meheraj Khatri | Systems Dashboard</title>
+    <title>Meheraj Khatri | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav class="card nav-bar">
-            <div class="logo">MK_SYSTEMS_v3.0</div>
-            <div class="nav-links-wrapper">
-                <a href="index.html" class="active">Home</a>
-                <a href="experience.html">Experience</a>
-                <a href="projects.html">Projects</a>
-                <a href="education.html">Education</a>
-            </div>
-            <div class="uptime-widget">
-                <span class="status-dot"></span>
-                Uptime: <span id="uptime-counter">0</span> Days
-            </div>
-        </nav>
-
-        <div class="dashboard-grid">
-            <div class="card profile-section">
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
-                        <span class="terminal-title">meheraj@ksu-desktop:~</span>
-                    </div>
-                    <code>$ whoami</code>
-                    <p>Meheraj Khatri</p>
-                    <code>$ info --edu</code>
-                    <p>Computer Science @ Kent State University</p>
-                    <p>GPA: 3.68 / 4.00</p>
-                    <code>$ grep "interests"</code>
-                    <p class="status-text">Systems Architecture, Data Pipelines, OS Logic</p>
-                </div>
-            </div>
-
-            <div class="card snapshot">
-                <h2 class="section-label">SNAPSHOT</h2>
-                <ul class="stats-list">
-                    <li><strong>Major:</strong> B.S. Computer Science</li>
-                    <li><strong>Graduation:</strong> Dec 2027</li>
-                    <li><strong>Location:</strong> Kent, OH</li>
-                    <li><strong>Status:</strong> Seeking Summer '26 Internships</li>
-                </ul>
-                <div class="honor-tag">Dean's List: Spring '24 - Fall '25</div>
-            </div>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Meheraj Khatri</a>
+            <ul class="nav-links">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="card">
-            <h2 class="section-label">WINS AND IMPACT</h2>
-            <div class="metrics-row">
-                <div class="metric-card">
-                    <div class="metric-value">80%</div>
-                    <div class="metric-label">Manual Data Reduction (SURE)</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">60+</div>
-                    <div class="metric-label">Peer-Reviewed Papers Screened</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">3.68</div>
-                    <div class="metric-label">Cumulative GPA</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">3+</div>
-                    <div class="metric-label">IT Security Systems Managed</div>
-                </div>
+    <main class="container">
+        <header class="hero">
+            <h1>Software Engineer & Systems Specialist</h1>
+            <p>Computer Science student at <strong>Kent State University</strong> with a focus on systems architecture and data engineering. Currently maintaining a <strong>3.68 GPA</strong> and seeking Summer 2026 internships[cite: 4, 5].</p>
+            <div class="hero-cta">
+                <a href="mailto:mkhatri5@kent.edu" class="btn primary">Email Me</a>
+                <a href="https://linkedin.com/in/meherajkhatri/" class="btn secondary">LinkedIn</a>
             </div>
-        </div>
+        </header>
 
-        <div class="analytics-grid">
+        <section id="featured">
+            <h2 class="section-title">Current Focus</h2>
             <div class="card">
-                <h2 class="section-label">CONSISTENCY HEATMAP</h2>
-                <div class="heatmap" id="heatmap"></div>
-                <div class="heatmap-legend">Low <div class="heat-bar"></div> High</div>
+                <h3>Station-Fall Game Architecture</h3>
+                <p>Leading an 8-person cohort to architect a 2D top-down rogue-like framework using Python and Pygame[cite: 45, 48]. Implementing state-driven logic for resource extraction and dynamic camera systems[cite: 46, 49].</p>
             </div>
-            <div class="card">
-                <h2 class="section-label">TECH RADAR</h2>
-                <canvas id="techRadar"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script>
+        </section>
+    </main>
 </body>
 </html>
