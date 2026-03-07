@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,62 +11,72 @@
             <a href="index.html" class="logo">MK</a>
             <ul class="nav-links">
                 <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="theme-toggle" class="theme-toggle">Dark Mode</button></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
-        <section>
-            <h2 class="section-title">Technical Projects</h2>
+    <main class="container" style="padding-top: 2rem;">
+        <h2 class="section-title">// ENGINEERING_PROJECTS</h2>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>University Database System (3NF)</h3>
-                    <span class="date-tag">Systems & DB</span>
-                </div>
-                <span class="tech-stack">MySQL, Flask, Relational Modeling, RBAC</span>
-                <ul>
-                    <li>Designed a comprehensive relational schema normalized to <strong>Third Normal Form (3NF)</strong> to eliminate data redundancy.</li>
-                    <li>Built a secure backend using Flask with Role-Based Access Control (RBAC) for student/admin portals.</li>
-                    <li>Developed custom SQL triggers to generate real-time enrollment audit logs and performance reports.</li>
-                </ul>
+        <div class="card">
+            <h3>Station-Fall Game</h3>
+            <div style="margin: 0.5rem 0 1.5rem;">
+                <span class="tech-tag">Python</span><span class="tech-tag">Pygame</span><span class="tech-tag">OOP</span><span class="tech-tag">State-Driven Logic</span>
             </div>
+            <ul>
+                <li>Architected a 2D top-down rogue-like framework using Python and Pygame, implementing a dynamic camera system tracking player movement.</li>
+                <li>Developed layered environment rendering and parallax backgrounds with sprite-sheet animations for diverse resource nodes and enemy types.</li>
+                <li>Streamlined team operations for an 8-person cohort by managing technical documentation and cross-functional reports to maintain velocity.</li>
+                <li>Spearheading the research and design of "Interactable," utilizing state-driven logic to handle resource extraction and upgrade-path triggers.</li>
+            </ul>
+        </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Banker’s Algorithm Deadlock Simulator</h3>
-                    <span class="date-tag">OS Architecture</span>
-                </div>
-                <span class="tech-stack">C++, OS Kernel Logic, Resource Allocation</span>
-                <ul>
-                    <li>Programmed a C++ simulation of the Banker's Algorithm to determine system "Safety States" during resource requests.</li>
-                    <li>Visualized the Need and Allocation matrices to demonstrate deadlock avoidance in multi-process environments.</li>
-                </ul>
+        <div class="card">
+            <h3>Rent & Roam Car Rental Services</h3>
+            <div style="margin: 0.5rem 0 1.5rem;">
+                <span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">AJAX</span><span class="tech-tag">UI/UX</span>
             </div>
+            <ul>
+                <li>Co-engineered a full-stack car rental platform adhering to Schneiderman’s 8 Golden Rules of Interface Design for high-utility UX.</li>
+                <li>Implemented AJAX for dynamic front-end features, facilitating real-time search results without requiring browser reloads.</li>
+                <li>Architected a relational database schema in PostgreSQL to manage user accounts, vehicle inventory, and real-time reservation tracking.</li>
+                <li>Designed primary "Purchase" and "Reservation" interfaces, incorporating automatic cost calculation and calendar-based error handling.</li>
+                <li>Implemented secure user authentication and session management via Flask with informative notification banners.</li>
+            </ul>
+        </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Rent & Roam: Full-Stack Platform</h3>
-                    <span class="date-tag">Web Systems</span>
-                </div>
-                <span class="tech-stack">Python, Flask, PostgreSQL, AJAX, JavaScript</span>
-                <ul>
-                    <li>Architected a car rental marketplace with a PostgreSQL backend for persistent reservation management.</li>
-                    <li>Integrated AJAX for asynchronous search queries, significantly enhancing UI responsiveness without page reloads.</li>
-                </ul>
+        <div class="card">
+            <h3>University Database Management System</h3>
+            <div style="margin: 0.5rem 0 1.5rem;">
+                <span class="tech-tag">MySQL</span><span class="tech-tag">Flask/PHP</span><span class="tech-tag">Database Design</span><span class="tech-tag">3NF</span>
+            </div>
+            <ul>
+                <li>Architected a full-stack relational database system normalized to 3NF to manage course registration and grading operations.</li>
+                <li>Implemented Role-Based Access Control (RBAC) and secure authentication for Admin, Instructor, and Student roles.</li>
+                <li>Engineered advanced SQL logic using triggers and constraints to enforce data integrity and generate analytical reports on enrollment and GPA trends.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Banker’s Algorithm Simulation</h3>
+            <div style="margin: 0.5rem 0 1.5rem;">
+                <span class="tech-tag">C++</span><span class="tech-tag">Operating Systems</span><span class="tech-tag">Data Structures</span>
+            </div>
+            <ul>
+                <li>Developed a deadlock avoidance simulator in C++ that evaluates system safety states by analyzing resource allocation and demand matrices.</li>
+                <li>Optimized resource management logic implementing the Banker’s Algorithm to dynamically calculate "Need" matrices and safe execution sequences.</li>
+            </ul>
+        </div>
+
+        <section id="contact" class="contact-footer">
+            <h2 class="section-title">// CONNECT</h2>
+            <div class="contact-links">
+                <a href="https://github.com/meheraj-khatri" target="_blank" class="btn">GitHub Repositories</a>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container footer-content">
-            <p class="footer-copy">© 2026 Meheraj Khatri. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="main.js"></script>
+    <footer>© 2026 Meheraj Khatri | All Rights Reserved</footer>
 </body>
 </html>

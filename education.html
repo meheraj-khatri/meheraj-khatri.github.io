@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education | Meheraj Khatri</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,56 +11,64 @@
             <a href="index.html" class="logo">MK</a>
             <ul class="nav-links">
                 <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="project.html">Projects</a></li>
                 <li><a href="education.html" class="active">Education</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="theme-toggle" class="theme-toggle">Dark Mode</button></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" style="padding-top: 2rem;">
+        
         <section>
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">// ACADEMIC_TRACK</h2>
             <div class="card">
-                <div class="card-header">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
                     <h3>Kent State University</h3>
-                    <span class="date-tag">Expected Dec 2027</span>
+                    <span class="date-tag">EXPECTED DEC 2027</span>
                 </div>
-                <p><strong>B.S. in Computer Science</strong> | GPA: <strong>3.68 / 4.00</strong></p>
-                <p style="margin-top: 1rem; color: var(--text-muted);">
-                    Honors: Dean's List (Spring 2024, Spring 2025, Fall 2025).<br>
-                    Inducted member of Alpha Lambda Delta Honors Society.<br>
-                    Student Member of Kent Honor Society.<br>
-                    Executive Board Member of Kent State Nepalese Student Association (FYI 2025-2026).
-                </p>
+                <p><strong>B.S. in Computer Science</strong> | GPA: <strong style="color: var(--accent);">3.68 / 4.00</strong></p>
+                
+                <div style="margin-top: 2rem;">
+                    <h4 style="color: var(--primary); font-size: 0.9rem; margin-bottom: 0.5rem;">Relevant Coursework:</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        CSII: Data Structures and Algorithms, Computer Organization, Operating Systems, Introduction to Database System Design, Software Engineering (In-Progress), CSIII: Programming Patterns (In-Progress).
+                    </p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h4 style="color: var(--primary); font-size: 0.9rem; margin-bottom: 0.5rem;">Leadership & Activities:</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Kent-NSA (Executive Member), HacKSU (Student Member), Alpha Lambda Delta Honors Society (Member), Dean’s List (Spring 2024, Spring 2025, Fall 2025).
+                    </p>
+                </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">Technical Matrix</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <h2 class="section-title">// TECHNICAL_MATRIX</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                 <div class="card" style="margin-bottom: 0;">
-                    <h4 style="color: var(--primary); margin-bottom: 0.75rem;">Languages & Databases</h4>
-                    <p style="font-size: 0.95rem;">Python, C++, MySQL, JavaScript, PostgreSQL, MIPS Assembly</p>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">Languages & Databases</h4>
+                    <p>Python, C++, MySQL, JavaScript, HTML/CSS, PostgreSQL</p>
                 </div>
                 <div class="card" style="margin-bottom: 0;">
-                    <h4 style="color: var(--primary); margin-bottom: 0.75rem;">Systems & Ops</h4>
-                    <p style="font-size: 0.95rem;">Linux (Ubuntu/Debian), Git/GitHub, OS Kernel Logic, WINPAK Access Control</p>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">Frameworks & Libraries</h4>
+                    <p>Flask, Pandas, Pygame, SLR Frameworks</p>
                 </div>
                 <div class="card" style="margin-bottom: 0;">
-                    <h4 style="color: var(--primary); margin-bottom: 0.75rem;">Frameworks & Tools</h4>
-                    <p style="font-size: 0.95rem;">Flask, Pandas, Pygame, RStudio, Terminal/Shell Scripting</p>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">Dev Tools & Ops</h4>
+                    <p>Terminal, Git/GitHub, Linux/Windows OS, RStudio, WINPAK, Fusion</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-footer">
+            <h2 class="section-title">// CONNECT</h2>
+            <div class="contact-links">
+                <a href="mailto:mkhatri5@kent.edu" class="btn">Email</a>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container footer-content">
-            <p class="footer-copy">© 2026 Meheraj Khatri. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="main.js"></script>
+    <footer>© 2026 Meheraj Khatri | All Rights Reserved</footer>
 </body>
 </html>
