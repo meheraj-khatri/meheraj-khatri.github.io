@@ -3,16 +3,16 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 I am a Computer Science student at Kent State University (GPA: 3.68) specializing in **low-level systems architecture** and **automated data pipelines**. I bridge the gap between complex backend logic and robust enterprise infrastructure.
 
-## 🛠️ Technical Matrix
+## Technical Matrix
 * **Languages:** Python, C++, MySQL, JavaScript, PostgreSQL, MIPS Assembly.
 * **Frameworks & Libraries:** Flask, Pandas, Pygame, SLR Frameworks.
 * **Systems & Ops:** Linux (Ubuntu/Debian), OS Kernel Logic, 3NF Database Design, WINPAK Access Control.
 * **Tools:** Git/GitHub, Terminal/Shell Scripting, RStudio, Fusion.
 
-## 💼 Professional Experience
+## Professional Experience
 
 ### **Federated Desktop Support Specialist** | Kent State University
 *Aug 2025 – Present*
@@ -25,7 +25,7 @@ I am a Computer Science student at Kent State University (GPA: 3.68) specializin
 * Implemented row validation and deduplication logic, **reducing manual data processing time by 80%**.
 * Published structured repositories following Kitchenham SLR protocols for rigorous data integrity.
 
-## 📁 Key Projects
+## Key Projects
 
 ### **Station-Fall: Rogue-like Engine Architecture**
 * Architecting a modular 2D engine in Python/Pygame for an 8-person development cohort.
@@ -40,10 +40,10 @@ I am a Computer Science student at Kent State University (GPA: 3.68) specializin
 ### **Banker’s Algorithm Deadlock Simulator**
 * Programmed a C++ simulation to determine system "Safety States" and visualize resource allocation matrices to avoid deadlocks.
 
-## 📬 Connectivity
+## Connectivity
 * **LinkedIn:** [linkedin.com/in/meherajkhatri/](https://linkedin.com/in/meherajkhatri/)
 * **Email:** [mkhatri5@kent.edu](mailto:mkhatri5@kent.edu)
 * **Portfolio:** [meheraj-khatri.github.io](https://meheraj-khatri.github.io)
 
 ---
-© 2026 Meheraj Khatri. Systems Portfolio v3.0
+© 2026 Meheraj Khatri
