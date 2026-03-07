@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meheraj Khatri | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="container nav-content">
-            <a href="index.html" class="logo">Meheraj Khatri</a>
+            <a href="index.html" class="logo">MK</a>
             <ul class="nav-links">
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">Dark Mode</button></li>
             </ul>
         </div>
     </nav>
@@ -22,20 +22,35 @@
     <main class="container">
         <header class="hero">
             <h1>Software Engineer & Systems Specialist</h1>
-            <p>Computer Science student at <strong>Kent State University</strong> with a focus on systems architecture and data engineering. Currently maintaining a <strong>3.68 GPA</strong> and seeking Summer 2026 internships[cite: 4, 5].</p>
-            <div class="hero-cta">
-                <a href="mailto:mkhatri5@kent.edu" class="btn primary">Email Me</a>
-                <a href="https://linkedin.com/in/meherajkhatri/" class="btn secondary">LinkedIn</a>
+            <p>Computer Science student at <strong>Kent State University</strong> focused on systems architecture and data engineering. Currently maintaining a <strong>3.68 GPA</strong> and seeking Summer 2026 internships.</p>
+            <div class="btn-group">
+                <a href="mailto:mkhatri5@kent.edu" class="btn btn-primary">Email Me</a>
+                <a href="https://linkedin.com/in/meherajkhatri/" class="btn btn-outline">LinkedIn</a>
             </div>
         </header>
 
-        <section id="featured">
+        <section>
             <h2 class="section-title">Current Focus</h2>
             <div class="card">
-                <h3>Station-Fall Game Architecture</h3>
-                <p>Leading an 8-person cohort to architect a 2D top-down rogue-like framework using Python and Pygame[cite: 45, 48]. Implementing state-driven logic for resource extraction and dynamic camera systems[cite: 46, 49].</p>
+                <div class="card-header">
+                    <h3>Station-Fall Game Architecture</h3>
+                    <span class="date-tag">Active</span>
+                </div>
+                <span class="tech-stack">Python, Pygame, Sprite Design</span>
+                <p>Leading an 8-person cohort to architect a 2D top-down rogue-like framework. Implementing state-driven logic for resource extraction and dynamic camera systems.</p>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="footer-copy">© 2026 Meheraj Khatri. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:mkhatri5@kent.edu">Email</a>
+                <a href="https://linkedin.com/in/meherajkhatri/">LinkedIn</a>
+                <a href="https://github.com/meheraj-khatri">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
