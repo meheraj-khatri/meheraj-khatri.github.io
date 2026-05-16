@@ -42,7 +42,7 @@ I am a Computer Science student at Kent State University (GPA: 3.70) specializin
 ## Connectivity
 * **LinkedIn:** [linkedin.com/in/meherajkhatri/](https://linkedin.com/in/meherajkhatri/)
 * **Email:** [mkhatri5@kent.edu](mailto:mkhatri5@kent.edu)
-* **Portfolio:** [meheraj-khatri.github.io](https://meheraj-khatri.github.io)
+* **Portfolio:** [meheraj-khatri.github.io](https://meherajkhatri.github.io)
 
 ---
 © 2026 Meheraj Khatri
