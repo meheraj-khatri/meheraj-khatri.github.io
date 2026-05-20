@@ -65,3 +65,163 @@ li { margin-bottom: 0.75rem; }
 .contact-footer { padding: 6rem 0 3rem; border-top: 1px solid var(--border); margin-top: 4rem; text-align: center; }
 .contact-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
 footer { padding: 2rem 0; font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); text-align: center; border-top: 1px solid var(--border); }
+
+
+
+/* --- PROFILE HERO LAYOUT --- */
+.profile-hero {
+    padding: 8rem 0 4rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 850px) {
+    .profile-hero {
+        grid-template-columns: 1fr;
+        padding: 4rem 0 2rem;
+        text-align: center;
+    }
+    .hero-avatar {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Terminal Frame for Profile Pic */
+.avatar-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 25px 12px 12px 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.avatar-terminal-header {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    display: flex;
+    gap: 6px;
+}
+
+.avatar-terminal-header .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+}
+.avatar-wrapper:hover .avatar-terminal-header .dot:nth-child(1) { background: #ef4444; }
+.avatar-wrapper:hover .avatar-terminal-header .dot:nth-child(2) { background: #eab308; }
+.avatar-wrapper:hover .avatar-terminal-header .dot:nth-child(3) { background: #22c55e; }
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.9) contrast(110%);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.avatar-wrapper:hover .profile-img {
+    filter: grayscale(0%) contrast(100%);
+    border-color: var(--primary);
+}
+
+/* --- EXPERIENCE PHOTO GRID --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.photo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.photo-frame {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    background: #000;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.empty-matrix-graphic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+.photo-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.photo-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    border: 1px solid rgba(190, 242, 100, 0.3);
+    padding: 1px 6px;
+    align-self: flex-start;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.photo-info h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.photo-info p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.photo-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px var(--glow);
+}
+
+.photo-card:hover .photo-frame img {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* --- SECURITY: PREVENT DRAG AND CLICK --- */
+.photo-frame img, .profile-img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
