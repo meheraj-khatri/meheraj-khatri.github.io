@@ -144,9 +144,15 @@ footer { padding: 2rem 0; font-family: 'Fira Code', monospace; font-size: 0.75re
 /* Symmetrical Grid Matrix */
 .photo-matrix-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .photo-matrix-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .photo-card-wrapper {
@@ -161,7 +167,7 @@ footer { padding: 2rem 0; font-family: 'Fira Code', monospace; font-size: 0.75re
 /* Strict Mathematical Aspect Ratio Clamping across Zoom/Resizes */
 .uniform-photo-frame {
     width: 100%;
-    aspect-ratio: 16 / 10; /* Dictates consistent horizontal card layout logic natively */
+    aspect-ratio: 4 / 3;
     position: relative;
     overflow: hidden;
     background: #000;
@@ -171,9 +177,83 @@ footer { padding: 2rem 0; font-family: 'Fira Code', monospace; font-size: 0.75re
 .uniform-photo-frame img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover; /* Keeps real resolution aspect ratios perfectly proportioned inside shapes */
     opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.photo-carousel-card {
+    min-width: 0;
+}
+
+.photo-carousel-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    border-bottom: 1px solid var(--border);
+}
+
+.photo-carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.photo-carousel-track {
+    display: flex;
+    transition: transform 0.35s ease;
+    will-change: transform;
+}
+
+.photo-carousel-slide {
+    min-width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.photo-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.92;
+}
+
+.photo-carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--border);
+    background: rgba(10, 10, 12, 0.72);
+    color: var(--text);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.photo-carousel-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(18, 18, 21, 0.92);
+}
+
+.photo-carousel-prev {
+    left: 0.75rem;
+}
+
+.photo-carousel-next {
+    right: 0.75rem;
+}
+
+.photo-carousel-card:hover .photo-carousel-slide img {
+    opacity: 1;
 }
 
 .photo-card-details {
@@ -215,6 +295,12 @@ footer { padding: 2rem 0; font-family: 'Fira Code', monospace; font-size: 0.75re
 .photo-card-wrapper:hover .uniform-photo-frame img {
     transform: scale(1.02);
     opacity: 1;
+}
+
+.photo-carousel-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px var(--glow);
 }
 
 /* Anti-Download/Anti-Drag Directives */

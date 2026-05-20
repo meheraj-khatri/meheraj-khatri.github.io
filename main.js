@@ -37,4 +37,32 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
+
+    // Photo carousel controls for same-event image groups
+    document.querySelectorAll('[data-photo-carousel]').forEach((carousel) => {
+        const track = carousel.querySelector('.photo-carousel-track');
+        const slides = carousel.querySelectorAll('.photo-carousel-slide');
+        const viewport = carousel.querySelector('.photo-carousel-viewport');
+        const prevButton = carousel.querySelector('.photo-carousel-prev');
+        const nextButton = carousel.querySelector('.photo-carousel-next');
+        let currentIndex = 0;
+
+        const updateCarousel = () => {
+            const slideWidth = viewport.clientWidth;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        };
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel();
+    });
 });
