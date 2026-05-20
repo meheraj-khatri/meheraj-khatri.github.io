@@ -1,115 +1,178 @@
-<main class="container">
-        <header class="profile-hero">
-            <div class="hero-text">
-                <p style="font-family: 'Fira Code'; color: var(--primary); margin-bottom: 1rem;">> Initializing systems...</p>
-                <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
-                    Aspiring Software Engineer & <br><span style="color: var(--primary)">Systems Specialist</span>
-                </h1>
-                <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin-bottom: 1.5rem;">
-                    Computer Science student at <strong>Kent State University</strong>.
-                    Passionate about building efficient, scalable software and exploring the intersection of technology and creativity.
-                </p>
-                
-                <div class="origin-tag" style="margin-bottom: 2rem;">
-                    <span class="tech-tag" style="color: var(--primary); background: rgba(99, 102, 241, 0.1); border-color: var(--primary);">
-                        // LOC: Kent, OH 🇺🇸
-                    </span>
-                    <span class="tech-tag">
-                        // ORIGIN: Nepal 🌐
-                    </span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meheraj Khatri | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">MK</a>
+            <ul class="nav-links">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 2rem;">
+        
+        <section>
+            <h2 class="section-title">// IDENTITY_MATRIX</h2>
+            <div class="card profile-card-layout">
+                <div class="profile-text-content">
+                    <p style="font-family: 'Fira Code'; color: var(--primary); margin-bottom: 1rem;">> Initializing systems...</p>
+                    <h1 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 1.5rem;">
+                        Aspiring Software Engineer & <br><span style="color: var(--primary)">Systems Specialist</span>
+                    </h1>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Computer Science student at <strong>Kent State University</strong>. 
+                        Passionate about building efficient, scalable software and exploring the intersection of technology and creativity.
+                        Actively seeking internship opportunities for <strong>Fall 2026 and onward</strong> to apply my skills in real-world projects.
+                    </p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <span class="tech-tag" style="color: var(--primary); background: rgba(99, 102, 241, 0.1); border-color: var(--primary);">// LOC: Kent, OH 🇺🇸</span>
+                        <span class="tech-tag">// ORIGIN: [Your Home Country] 🌐</span>
+                    </div>
+
+                    <div>
+                        <a href="projects.html" class="btn">Explore Projects</a>
+                        <a href="#contact" class="btn" style="margin-left: 10px;">Connect</a>
+                    </div>
                 </div>
 
-                <div>
-                    <a href="projects.html" class="btn">Explore Projects</a>
-                    <a href="#contact" class="btn" style="margin-left: 10px;">Connect</a>
-                </div>
-            </div>
-            
-            <div class="hero-avatar">
-                <div class="avatar-wrapper">
-                    <img src="images/profile.jpeg" alt="Meheraj Khatri" class="profile-img">
-                    <div class="avatar-terminal-header">
-                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <div class="profile-image-container">
+                    <div class="avatar-terminal-frame">
+                        <div class="terminal-dots">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <img src="images/profile.jpeg" alt="Meheraj Khatri" class="profile-img">
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
 
         <section>
             <h2 class="section-title">// FIELD_SNAPSHOTS</h2>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-family: 'Fira Code';">
-                > Visual logs: Documenting research, leadership, and operational architecture...
-            </p>
-            
-            <div class="photo-grid">
+            <div class="photo-matrix-grid">
                 
-                <div class="photo-card">
-                    <div class="photo-frame">
-                        <img src="images/SURE_Symposium_1.jpeg" alt="SURE Symposium Presentation">
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
+                        <img src="images/SURE_Symposium_1.jpeg" alt="SURE Symposium Presentation 1">
                     </div>
-                    <div class="photo-info">
+                    <div class="photo-card-details">
                         <span class="photo-tag">RESEARCH</span>
-                        <h4>SURE Symposium '25</h4>
-                        <p>Presenting automated data pipelines and academic synthesis protocols.</p>
+                        <h4>SURE Symposium I</h4>
+                        <p>Presenting data pipeline structures and literature synthesis protocols.</p>
                     </div>
                 </div>
 
-                <div class="photo-card">
-                    <div class="photo-frame">
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
+                        <img src="images/SURE_Symposium_2.jpeg" alt="SURE Symposium Presentation 2">
+                    </div>
+                    <div class="photo-card-details">
+                        <span class="photo-tag">RESEARCH</span>
+                        <h4>SURE Symposium II</h4>
+                        <p>Demonstrating integration and deduplication metrics of multi-source files.</p>
+                    </div>
+                </div>
+
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
                         <img src="images/Hackathon_team.jpeg" alt="Kent Hack Enough Team">
                     </div>
-                    <div class="photo-info">
+                    <div class="photo-card-details">
                         <span class="photo-tag">ENGINEERING</span>
                         <h4>The Gatherer's Guide</h4>
-                        <p>Co-developing a predictive ML pipeline during the 24-hour KHE sprint.</p>
+                        <p>Constructing a predictive agricultural risk engine in a 24-hour sprint.</p>
                     </div>
                 </div>
 
-                <div class="photo-card">
-                    <div class="photo-frame">
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
                         <img src="images/SRWC_Operations.jpeg" alt="SRWC Facility Operations">
                     </div>
-                    <div class="photo-info">
+                    <div class="photo-card-details">
                         <span class="photo-tag">OPERATIONS</span>
                         <h4>SRWC Infrastructure</h4>
-                        <p>Frontline decision-making and troubleshooting in the 150k+ sq. ft. complex.</p>
+                        <p>Frontline decision-making and hardware troubleshooting inside the facility.</p>
                     </div>
                 </div>
 
-                <div class="photo-card">
-                    <div class="photo-frame">
-                        <img src="images/Judging_Ohio_Science_Day_1.jpeg" alt="Judging Ohio Science Day">
-                    </div>
-                    <div class="photo-info">
-                        <span class="photo-tag">LEADERSHIP</span>
-                        <h4>Ohio Science Day</h4>
-                        <p>Evaluating and mentoring the next generation of STEM innovators.</p>
-                    </div>
-                </div>
-
-                <div class="photo-card">
-                    <div class="photo-frame">
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
                         <img src="images/srwc_student_cohort.jpeg" alt="SRWC Student Cohort">
                     </div>
-                    <div class="photo-info">
+                    <div class="photo-card-details">
                         <span class="photo-tag">TEAM</span>
-                        <h4>SRWC Student Cohort</h4>
-                        <p>Supervising student employee teams to uphold strict operational protocols.</p>
+                        <h4>Operations Cohort</h4>
+                        <p>Guiding student employees to ensure compliance with security standards.</p>
                     </div>
                 </div>
 
-                <div class="photo-card">
-                    <div class="photo-frame">
-                        <div class="empty-matrix-graphic">
-                            <span style="font-family: 'Fira Code'; color: var(--accent); font-size: 0.8rem;">// ROOT_DIRECTORY</span>
-                        </div>
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
+                        <img src="images/SRWC.jpeg" alt="SRWC Campus Complex">
                     </div>
-                    <div class="photo-info">
-                        <span class="photo-tag" style="border-color: var(--primary); color: var(--primary);">ROOTS</span>
-                        <h4>From Nepal to Ohio</h4>
-                        <p>Bringing a global perspective to software and systems architecture.</p>
+                    <div class="photo-card-details">
+                        <span class="photo-tag">FACILITY</span>
+                        <h4>SRWC Complex</h4>
+                        <p>Managing asset allocation and IT configurations across 150k+ sq. ft.</p>
+                    </div>
+                </div>
+
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
+                        <img src="images/Judging_Ohio_Science_Day_1.jpeg" alt="Judging Ohio Science Day 1">
+                    </div>
+                    <div class="photo-card-details">
+                        <span class="photo-tag">LEADERSHIP</span>
+                        <h4>Ohio Science Day I</h4>
+                        <p>Evaluating state-level STEM projects and mentoring upcoming students.</p>
+                    </div>
+                </div>
+
+                <div class="photo-card-wrapper">
+                    <div class="uniform-photo-frame">
+                        <img src="images/Judging_Ohio_Science_Day_2.jpeg" alt="Judging Ohio Science Day 2">
+                    </div>
+                    <div class="photo-card-details">
+                        <span class="photo-tag">LEADERSHIP</span>
+                        <h4>Ohio Science Day II</h4>
+                        <p>Synthesizing logic metrics and presentation performance protocols.</p>
                     </div>
                 </div>
 
             </div>
         </section>
+
+        <section>
+            <h2 class="section-title">// FEATURED_ARCHITECTURE</h2>
+            <div class="card">
+                <span class="date-tag">JAN 2026 – MAY 2026</span>
+                <h3>Station-Fall: Rogue-like Engine & Game</h3>
+                <p style="color: var(--text-muted); margin: 1rem 0;">Collaborated in an 8-person team to engineer and deploy a feature-complete 2D top-down roguelike shooter engine in Python/Pygame, featuring state-driven logic, automated unit test suites, and dynamic WebAssembly production hosting.</p>
+                <div style="margin-bottom: 1.5rem;">
+                    <span class="tech-tag">Python</span><span class="tech-tag">Pygame</span><span class="tech-tag">OOP</span><span class="tech-tag">Agile (Scrum)</span><span class="tech-tag">WebAssembly</span>
+                </div>
+                <a href="https://stationfallteam.github.io/Station-fall/" target="_blank" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Play Station-Fall</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-footer">
+            <h2 class="section-title">// CONNECT_REMOTE</h2>
+            <div class="contact-links">
+                <a href="mailto:mkhatri5@kent.edu" class="btn">Email</a>
+                <a href="https://linkedin.com/in/meherajkhatri/" target="_blank" class="btn">LinkedIn: /meherajkhatri</a>
+                <a href="https://github.com/meherajkhatri" target="_blank" class="btn">GitHub: @meherajkhatri</a>
+            </div>
+        </section>
+    </main>
+    <footer>© 2026 Meheraj Khatri | All Rights Reserved</footer>
+</body>
+</html>
