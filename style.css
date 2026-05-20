@@ -10,6 +10,9 @@
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Ensure images don't exceed their containers and keep natural aspect ratio */
+img { max-width: 100%; height: auto; display: block; }
+
 * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
 
 body {
